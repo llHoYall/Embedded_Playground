@@ -1,33 +1,94 @@
-# Mbed OS
+# Mbed OS 5
 
-Arm Mbed OS is a free, open-source embedded operating system designed specifically for the "things" in the Internet of Things.
+Mbed OS is an open-source operating system for platforms using Arm microcontrollers designed specifically for Internet of Things (IoT) devices: low-powered, constrained devices that need to connect to the internet.
 
-It includes all the features you need to develop a connected product based on an Arm Cortex-M microcontroller, including security, connectivity, an RTOS, and drivers for sensors and I/O devices.
+Mbed OS provides an abstraction layer for the microcontrollers it runs on, so that developers can focus on writing C/C++ applications that call functionality available on a range of hardware.
 
-## Mbed CLI
+Mbed OS applications can be reused on any Mbed-compatible platform.
+
+## Mbed CLI (Windows)
+
+### Installation
+
+```
+$ pip install mbed-cli
+```
+
+### Setup
+
+```
+$ mbed config -G ARM_PATH <path to ARM bin>
+```
+
+> Ex) $ mbed config -G ARMC6_PATH 'C:\Program Files\ARMCompiler6.6.1\bin\'
 
 ### Create
 
-> $ mbed new {project}
+Create new mbed program or library.
+
+```
+$ mbed new <project>
+```
 
 ### Import Program
 
-> $ mbed import {url}
+Import program from URL.
+
+```
+$ mbed import <url>
+```
+
+> Ex) $ mbed import https://github.com/ARMmbed/mbed-os-example-blinky
 
 ### Add a Library
 
-> $ mbed add {url}
+Add library from URL.
+
+```
+$ mbed add <url>
+```
 
 ### Remove a Library
 
-> $ mbed remove {library}
+Remove library.
+
+```
+$ mbed remove <library>
+```
+
+### Detect Hardware
+
+Detect connected Mbed targets/boards.
+
+```
+$ mbed detect
+```
+
+### Serial Terminal
+
+Open serial terminal to connected target.
+
+```
+$ mbed sterm
+```
+
+> Ex) $ mbed sterm -b 115200 -p 3
+> * -b \<BAUDRATE\> / --baudrate \<BAUDRATE\>
+> * -p \<PORT\> / --port \<PORT\>
 
 ### Compile
 
-* Compiler: GCC_ARM
-* Board: Nucleo F401RE
+Compile code using the mbed build tools.
 
-> $ mbed compile -t GCC_ARM -m NUCLEO_F401RE -f
+```
+$ mbed compile -m <TARGET> -t <TOOLCHAIN>
+```
+
+> Ex) $ mbed compile -t ARMC6 -m NUCLEO_F411RE -f
+> * -t \<TOOLCHAIN\> / --toolchain \<TOOLCHAIN\> : ARM, GCC_ARM, IAR
+> * -m \<TARGET\> / --target \<TARGET\>: K64F, NUCLEO_F401RE, NRF51822, ...
+> * -f / --flash
+> * --sterm
 
 ## Reference
 
