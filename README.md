@@ -1,3 +1,3 @@
-# hEmbedded_Playground
+# Embedded_Playground
 
 HoYa's Embedded Playground.
