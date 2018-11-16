@@ -4,14 +4,15 @@
 
 The SCS also includes a system timer (SysTick) that can be used by an operating system to ease porting from another platform. The SysTick can be polled by software or can be configured to generate an interrupt. The SysTick interrupt has its own entry in the vector table and therefore can have its own handler.
 
+
 ## SysTick Register
 
-| Name                       | Address    | Type |Description |
-|----------------------------|------------|------|------------|
-| SysTick Control and Status | 0xE000E010 | RW   | basic control of SysTick e.g. enable, clock source, interrupt or poll |
-| SysTick Reload Value       | 0xE000E014 | RW   | value to load Current Value register when 0 is reached |
-| SysTick Current Value      | 0xE000E018 | RW   | the current value of the count down. |
-| SysTick Calibration Value  | 0xE000E01C | RO   | might contain the number of ticks to generate a 10ms interval and other information, depending on the implementation |
+ Name                       | Address    | Type |Description
+----------------------------|------------|------|-----------
+[SysTick Control and Status](#SysTick-Control-and-Status-Register) | 0xE000E010 | RW | basic control of SysTick e.g. enable, clock source, interrupt or poll
+[SysTick Reload Value](#SysTick-Reload-Value-Register) | 0xE000E014 | RW | value to load Current Value register when 0 is reached
+[SysTick Current Value](#SysTick-Current-Value-Register) | 0xE000E018 | RW | the current value of the count down
+[SysTick Calibration Value](#SysTick-Calibration-Value-Register) | 0xE000E01C | RO | might contain the number of ticks to generate a 10ms interval and other information, depending on the implementation
 
 * Required Privilege : Privileged
 
