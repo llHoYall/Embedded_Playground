@@ -4,8 +4,9 @@
 
 * [AREA](area.md)
 * [DCD](dcd.md)
-* [EXPORT](export.md)
+* [EXPORT](export_global.md)
 * [FUNCTION](function_proc.md)
+* [GLOBAL](export_global.md)
 * [PROC](function_proc.md)
 
 ## Reference

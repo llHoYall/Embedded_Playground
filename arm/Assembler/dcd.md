@@ -1,5 +1,7 @@
 # DCD
 
+The `DCD` directive allocates one or more words of memory, aligned on four-byte boundaries, and defines the initial runtime contents of the memory. `DCDU` is the same, except that the memory alignment is arbitrary.
+
 ## Syntax
 
 > {label} DCD{U} expr{,expr}

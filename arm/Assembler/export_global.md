@@ -1,4 +1,6 @@
-# EXPORT
+# EXPORT or GLOBAL
+
+The `EXPORT` directive declares a symbol that can be used by the linker to resolve symbol references in separate object and library files. `GLOBAL` is a synonym for `EXPORT`.
 
 ## Syntax
 

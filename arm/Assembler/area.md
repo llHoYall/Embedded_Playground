@@ -1,5 +1,7 @@
 # AREA
 
+The `AREA` directive instructs the assembler to assemble a new code or data section.
+
 ## Syntax
 
 > AREA sectionname{,attr}{,attr}...
