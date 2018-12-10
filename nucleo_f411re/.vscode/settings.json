@@ -1,0 +1,7 @@
+{
+	"files.associations": {
+		"*.mk": "makefile",
+		"*.jsx": "javascript",
+		"stm32f4xx_hal.h": "c"
+	}
+}

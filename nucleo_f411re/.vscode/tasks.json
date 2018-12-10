@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build: TDD",
+			"type": "shell",
+			"command": "make stm32f411re-nucleo_tdd",
+			"problemMatcher": "$gcc",
+		},
+		{
+			"label": "Clean",
+			"type": "shell",
+			"command": "make clean",
+			"problemMatcher": "$gcc",
+		},
+	]
+}
